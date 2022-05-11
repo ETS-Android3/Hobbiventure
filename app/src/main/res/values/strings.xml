@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Bottom navigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_survey">Survey</string>
+    <string name="title_search">Search</string>
+    <string name="title_history">History</string>
+    <string name="title_profile">Profile</string>
+</resources>
