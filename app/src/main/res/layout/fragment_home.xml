@@ -19,4 +19,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="73dp"
+        android:background="@color/purple_500"
+        android:src="@drawable/ic_baseline_near_me_24"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="189dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
