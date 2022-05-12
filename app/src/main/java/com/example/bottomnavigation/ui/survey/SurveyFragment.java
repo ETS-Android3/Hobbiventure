@@ -10,21 +10,21 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.bottomnavigation.databinding.FragmentSearchBinding;
+import com.example.bottomnavigation.databinding.FragmentSurveyBinding;
 
 public class SurveyFragment extends Fragment {
 
-    private FragmentSearchBinding binding;
+    private FragmentSurveyBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         SurveyViewModel surveyViewModel =
                 new ViewModelProvider(this).get(SurveyViewModel.class);
 
-        binding = FragmentSearchBinding.inflate(inflater, container, false);
+        binding = FragmentSurveyBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSearch;
+        final TextView textView = binding.textSurvey;
         surveyViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
