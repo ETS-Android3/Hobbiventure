@@ -15,5 +15,6 @@
     <string name="event4">Event4</string>
     <string name="title_history">History</string>
     <string name="title_profile">Profile</string>
+    <string name="place_image">PlaceImage</string>
     <string name="todo">TODO</string>
 </resources>
