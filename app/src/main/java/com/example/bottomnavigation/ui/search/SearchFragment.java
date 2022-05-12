@@ -26,8 +26,10 @@ public class SearchFragment extends Fragment {
 
         final TextView outdoor = binding.textSearchOutdoor;
         final TextView indoor = binding.textSearchIndoor;
+        final TextView events = binding.textSearchEvents;
         searchViewModel.getTextOutdoor().observe(getViewLifecycleOwner(), outdoor::setText);
         searchViewModel.getTextIndoor().observe(getViewLifecycleOwner(), indoor::setText);
+        searchViewModel.getTextEvents().observe(getViewLifecycleOwner(), events::setText);
         return root;
     }
 

@@ -6,6 +6,13 @@
     <string name="category1">Category1</string>
     <string name="category2">Category2</string>
     <string name="category3">Category3</string>
+    <string name="category4">Category4</string>
+    <string name="category5">Category5</string>
+    <string name="category6">Category6</string>
+    <string name="event1">Event1</string>
+    <string name="event2">Event2</string>
+    <string name="event3">Event3</string>
+    <string name="event4">Event4</string>
     <string name="title_history">History</string>
     <string name="title_profile">Profile</string>
     <string name="todo">TODO</string>
