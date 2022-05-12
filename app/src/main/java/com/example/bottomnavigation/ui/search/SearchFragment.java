@@ -24,8 +24,10 @@ public class SearchFragment extends Fragment {
         binding = FragmentSearchBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSearch;
-        searchViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView outdoor = binding.textSearchOutdoor;
+        final TextView indoor = binding.textSearchIndoor;
+        searchViewModel.getTextOutdoor().observe(getViewLifecycleOwner(), outdoor::setText);
+        searchViewModel.getTextIndoor().observe(getViewLifecycleOwner(), indoor::setText);
         return root;
     }
 
