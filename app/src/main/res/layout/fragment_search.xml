@@ -7,7 +7,7 @@
     tools:context=".ui.search.SearchFragment">
 
     <TextView
-        android:id="@+id/text_search"
+        android:id="@+id/text_search_outdoor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -23,13 +23,14 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_search">
+        app:layout_constraintTop_toBottomOf="@+id/text_search_outdoor">
 
         <ImageButton
             android:id="@+id/category1"
@@ -51,6 +52,35 @@
             android:contentDescription="@string/category2"
             android:src="@drawable/outdoor_156x96px" />
 
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_search_indoor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_search_indoor"
+        app:layout_constraintVertical_bias="0.0">
+
         <ImageButton
             android:id="@+id/category3"
             android:layout_width="wrap_content"
@@ -60,6 +90,17 @@
             android:layout_marginEnd="12dp"
             android:contentDescription="@string/category3"
             android:src="@drawable/outdoor_156x96px" />
+
+        <ImageButton
+            android:id="@+id/category4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/category2"
+            android:src="@drawable/outdoor_156x96px" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

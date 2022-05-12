@@ -6,14 +6,20 @@ import androidx.lifecycle.ViewModel;
 
 public class SearchViewModel extends ViewModel {
 
-    private final MutableLiveData<String> mText;
+    private final MutableLiveData<String> outdoor;
+    private final MutableLiveData<String> indoor;
 
     public SearchViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is search fragment");
+        outdoor = new MutableLiveData<>();
+        outdoor.setValue("Outdoor categories");
+        indoor = new MutableLiveData<>();
+        indoor.setValue("Indoor categories");
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public LiveData<String> getTextOutdoor() {
+        return outdoor;
+    }
+    public LiveData<String> getTextIndoor() {
+        return indoor;
     }
 }
