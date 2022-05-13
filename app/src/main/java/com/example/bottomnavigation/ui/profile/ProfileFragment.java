@@ -40,20 +40,6 @@ public class ProfileFragment extends FragmentActivity {
 
     public View onCreate(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-
-        editText = editText.findViewById(R.id.etUpdEmail);
-        editText2 = editText2.findViewById(R.id.etUpdPass);
-        button = button.findViewById(R.id.updateEmail_btn);
-        button2 = button2.findViewById(R.id.updatePass_btn);
-
-        button.setOnClickListener(view -> {
-            updEmail();
-        });
-
-        button2.setOnClickListener(view -> {
-            updPassword();
-        });
-
         ProfileViewModel profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
         binding = FragmentProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -68,31 +54,5 @@ public class ProfileFragment extends FragmentActivity {
         binding = null;
     }
 
-    public void updEmail(){
-        user.updateEmail(editText.getText().toString())
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            //Toast.makeText(ProfileFragment.this, "Email successfully updated! ", Toast.LENGTH_SHORT).show();
-                        }else{
-                           // Toast.makeText(ProfileFragment.this, "Something went wrong... ", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-    }
 
-    public void updPassword(){
-        user.updatePassword(editText2.getText().toString())
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            // Toast.makeText(ProfileFragment.this, "Password successfully updated! ", Toast.LENGTH_SHORT).show();
-                        }else{
-                           // Toast.makeText(ProfileFragment.this, "Something went wrong... ", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-    }
 }
