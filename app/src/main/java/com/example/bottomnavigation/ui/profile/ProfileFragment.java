@@ -14,7 +14,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.bottomnavigation.R;
@@ -24,7 +26,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class ProfileFragment extends Fragment {
+public class ProfileFragment extends FragmentActivity {
 
     private FragmentProfileBinding binding;
     private Button button;
@@ -36,12 +38,11 @@ public class ProfileFragment extends Fragment {
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     String email = user.getEmail();
 
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreate(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
         editText = editText.findViewById(R.id.etUpdEmail);
         editText2 = editText2.findViewById(R.id.etUpdPass);
-
         button = button.findViewById(R.id.updateEmail_btn);
         button2 = button2.findViewById(R.id.updatePass_btn);
 
@@ -58,12 +59,12 @@ public class ProfileFragment extends Fragment {
         View root = binding.getRoot();
         return root;
 
-
     }
 
+
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
+    public void onDestroy() {
+        super.onDestroy();
         binding = null;
     }
 
