@@ -38,7 +38,6 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_profile);
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         editText = editText.findViewById(R.id.etUpdEmail);
         editText2 = editText.findViewById(R.id.etUpdPass);
 
