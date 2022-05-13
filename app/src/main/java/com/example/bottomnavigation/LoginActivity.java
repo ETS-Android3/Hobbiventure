@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView tvRegisterHere;
     Button btnLogin;
 
-    FirebaseAuth mAuth;
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
             loginUser();
         });
         tvRegisterHere.setOnClickListener(view -> {
-            startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+            startActivity(new Intent(this, RegisterActivity.class));
         });
 
 
@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onStart();
         FirebaseUser user = mAuth.getCurrentUser();
         if (user == null){
-            startActivity(new Intent(this, LoginActivity.class));
+          //  startActivity(new Intent(this, LoginActivity.class));
         }
     }
 }
