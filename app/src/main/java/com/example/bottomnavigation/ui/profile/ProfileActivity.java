@@ -21,22 +21,33 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-    String email = user.getEmail();
+
     private Button button;
     private TextView textView;
     private EditText editText;
+    
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    String email = user.getEmail().toString();
 
-    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_profile);
 
+
         textView = textView.findViewById(R.id.tvCurrEmail);
         textView.setText(email);
 
+        button = button.findViewById(R.id.updateEmail_btn);
+        button = button.findViewById(R.id.updatePass_btn);
 
+        button.setOnClickListener(view -> {
+            updateEmail();
+        });
+
+        button.setOnClickListener(view -> {
+            updatePassword();
+        });
 
     }
 
