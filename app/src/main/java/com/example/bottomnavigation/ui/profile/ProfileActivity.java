@@ -25,8 +25,10 @@ public class ProfileActivity extends AppCompatActivity {
 
 
     private Button button;
+    private Button button2;
     private TextView textView;
     private EditText editText;
+    private EditText editText2;
 
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     String email = user.getEmail();
@@ -42,16 +44,16 @@ public class ProfileActivity extends AppCompatActivity {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         editText = editText.findViewById(R.id.etUpdEmail);
-        editText = editText.findViewById(R.id.etUpdPass);
+        editText2 = editText.findViewById(R.id.etUpdPass);
 
         button = button.findViewById(R.id.updateEmail_btn);
-        button = button.findViewById(R.id.updatePass_btn);
+        button2 = button2.findViewById(R.id.updatePass_btn);
 
         button.setOnClickListener(view -> {
             updEmail();
         });
 
-        button.setOnClickListener(view -> {
+        button2.setOnClickListener(view -> {
             updPassword();
         });
 
@@ -64,6 +66,8 @@ public class ProfileActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(ProfileActivity.this, "Email successfully updated! ", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(ProfileActivity.this, "Something went wrong... ", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -71,12 +75,14 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void updPassword(){
-        user.updatePassword(editText.getText().toString())
+        user.updatePassword(editText2.getText().toString())
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(ProfileActivity.this, "Password successfully updated! ", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(ProfileActivity.this, "Something went wrong... ", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
