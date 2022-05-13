@@ -15,17 +15,17 @@ import com.example.bottomnavigation.databinding.FragmentProfileBinding;
 public class ProfileFragment extends Fragment {
 
     private FragmentProfileBinding binding;
+    TextView textView;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        ProfileViewModel profileViewModel =
-                new ViewModelProvider(this).get(ProfileViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        ProfileViewModel profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
 
         binding = FragmentProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textProfile;
-        profileViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        //final TextView textView = binding.textProfile;
+        //profileViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

@@ -1,5 +1,7 @@
 package com.example.bottomnavigation.ui.profile;
 
+import android.widget.TextView;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -7,6 +9,7 @@ import androidx.lifecycle.ViewModel;
 public class ProfileViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
+
 
     public ProfileViewModel() {
         mText = new MutableLiveData<>();
@@ -16,4 +19,6 @@ public class ProfileViewModel extends ViewModel {
     public LiveData<String> getText() {
         return mText;
     }
+
+
 }
