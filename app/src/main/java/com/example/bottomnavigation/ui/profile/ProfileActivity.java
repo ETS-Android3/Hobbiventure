@@ -8,11 +8,13 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.bottomnavigation.LoginActivity;
 import com.example.bottomnavigation.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -25,9 +27,9 @@ public class ProfileActivity extends AppCompatActivity {
     private Button button;
     private TextView textView;
     private EditText editText;
-    
+
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-    String email = user.getEmail().toString();
+    String email = user.getEmail();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,43 +40,43 @@ public class ProfileActivity extends AppCompatActivity {
         textView = textView.findViewById(R.id.tvCurrEmail);
         textView.setText(email);
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        editText = editText.findViewById(R.id.etUpdEmail);
+        editText = editText.findViewById(R.id.etUpdPass);
+
         button = button.findViewById(R.id.updateEmail_btn);
         button = button.findViewById(R.id.updatePass_btn);
 
         button.setOnClickListener(view -> {
-            updateEmail();
+            updEmail();
         });
 
         button.setOnClickListener(view -> {
-            updatePassword();
+            updPassword();
         });
 
     }
 
-    public void updateEmail(){
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        editText = editText.findViewById(R.id.etUpdEmail);
+    public void updEmail(){
         user.updateEmail(editText.getText().toString())
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Log.d(TAG, "Email successfully updated!");
+                            Toast.makeText(ProfileActivity.this, "Email successfully updated! ", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
 
     }
 
-    public void updatePassword(){
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        editText = editText.findViewById(R.id.etUpdPass);
+    public void updPassword(){
         user.updatePassword(editText.getText().toString())
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Log.d(TAG, "Password successfully updated!");
+                            Toast.makeText(ProfileActivity.this, "Password successfully updated! ", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
