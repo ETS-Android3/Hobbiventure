@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         style="@style/ListName"
-        android:text="place" />
+        android:text="@string/place_name" />
 
     <ImageView
         android:id="@+id/iv_icon"
