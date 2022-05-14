@@ -65,6 +65,9 @@ public class CategoryFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        final FragmentTransaction fr = getParentFragmentManager().beginTransaction();
+        fr.detach(CategoryFragment.this);
+        fr.commit();
         binding = null;
     }
 }
