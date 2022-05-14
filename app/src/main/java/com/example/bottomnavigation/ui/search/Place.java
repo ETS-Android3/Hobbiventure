@@ -1,8 +1,8 @@
 package com.example.bottomnavigation.ui.search;
 
-public class PlaceFragment {
+public class Place {
 
-        public PlaceFragment(String name, int icon) {
+        public Place(String name, int icon) {
             this.name = name;
             this.icon = icon;
         }

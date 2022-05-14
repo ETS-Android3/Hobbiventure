@@ -1,8 +1,12 @@
 package com.example.bottomnavigation.ui.search;
 
+import android.view.View;
+import android.widget.ImageButton;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
 
 public class SearchViewModel extends ViewModel {
 
@@ -10,7 +14,9 @@ public class SearchViewModel extends ViewModel {
     private final MutableLiveData<String> indoor;
     private final MutableLiveData<String> events;
 
+
     public SearchViewModel() {
+
         outdoor = new MutableLiveData<>();
         outdoor.setValue("Outdoor categories");
         indoor = new MutableLiveData<>();

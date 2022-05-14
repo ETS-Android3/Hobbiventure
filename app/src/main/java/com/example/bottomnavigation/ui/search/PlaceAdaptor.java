@@ -18,13 +18,13 @@ public class PlaceAdaptor extends RecyclerView.Adapter<PlaceAdaptor.ViewHolder> 
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.fragment_category, parent, false);
+        View view = inflater.inflate(R.layout.category_lists, parent, false);
         return new ViewHolder(view);
     }
 
-    private ArrayList<PlaceFragment> places;
+    private ArrayList<Place> places;
 
-    PlaceAdaptor(ArrayList<PlaceFragment> places) {
+    PlaceAdaptor(ArrayList<Place> places) {
         this.places = places;
     }
 
@@ -38,15 +38,7 @@ public class PlaceAdaptor extends RecyclerView.Adapter<PlaceAdaptor.ViewHolder> 
         return places.size();
     }
 
-    public interface OnClickListener {
-        void onClick(PlaceFragment placeFragment);
-    }
 
-    private OnClickListener listener;
-
-    public void setOnClickListener(OnClickListener listener) {
-        this.listener = listener;
-    }
 
     class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView name;
@@ -55,9 +47,7 @@ public class PlaceAdaptor extends RecyclerView.Adapter<PlaceAdaptor.ViewHolder> 
         ViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.tv_name);
-            icon = itemView.findViewById(R.id.iv_icon);
-                listener.onClick(places.get(getBindingAdapterPosition()));
-        }
+            icon = itemView.findViewById(R.id.iv_icon); }
 
     }
 }

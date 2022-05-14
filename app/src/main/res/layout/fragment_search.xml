@@ -44,7 +44,8 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
                     android:contentDescription="@string/category1"
-                    android:src="@drawable/outdoor_156x96px" />
+                    android:src="@drawable/outdoor_156x96px"
+                    />
 
                 <ImageButton
                     android:id="@+id/category2"
