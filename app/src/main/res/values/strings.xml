@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bottom navigation</string>
+    <string name="app_name">HobbiVenture</string>
     <string name="title_home">Home</string>
     <string name="title_survey">Survey</string>
     <string name="title_search">Search</string>
