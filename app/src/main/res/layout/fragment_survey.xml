@@ -33,6 +33,7 @@
 
     </Button>
 
+
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="97dp"
@@ -72,5 +73,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_survey"
         app:layout_constraintVertical_bias="0.666" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

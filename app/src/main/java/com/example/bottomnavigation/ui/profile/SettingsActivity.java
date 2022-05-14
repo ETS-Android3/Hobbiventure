@@ -16,6 +16,11 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-   //     setContentView(R.xml.preferences);
+        setContentView(R.layout.settings_test);
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(android.R.id.content, new SettingsFragment())
+                .commit();
     }
-}
+    }
+
