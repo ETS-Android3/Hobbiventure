@@ -17,10 +17,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.bottomnavigation.R;
 import com.example.bottomnavigation.databinding.FragmentProfileBinding;
+import com.example.bottomnavigation.ui.search.CategoryFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,6 +39,12 @@ public class ProfileFragment extends Fragment {
         ProfileViewModel profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
         binding = FragmentProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        final Button button = binding.button3;
+        final FragmentTransaction fr = getParentFragmentManager().beginTransaction();
+        button.setOnClickListener(view -> {
+            fr.replace(R.id.nav_host_fragment_activity_main,new SettingsFragment());
+            fr.commit();
+        });
         return root;
 
 
