@@ -30,14 +30,14 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class ProfileFragment extends Fragment {
-
+/*
     private Button button;
     private Button button2;
    // private Button button3;
     // private TextView textView;
     private EditText editText;
     private EditText editText2;
-
+*/
 
 
     private FragmentProfileBinding binding;
@@ -46,7 +46,10 @@ public class ProfileFragment extends Fragment {
     String email = user.getEmail();
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        ProfileViewModel profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
+        binding = FragmentProfileBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
+/*
         editText = editText.findViewById(R.id.etUpdEmail);
         editText2 = editText.findViewById(R.id.etUpdPass);
 
@@ -69,9 +72,6 @@ public class ProfileFragment extends Fragment {
             }
         });*/
 
-        ProfileViewModel profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
-        binding = FragmentProfileBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
         final Button button = binding.button3;
         final FragmentTransaction fr = getParentFragmentManager().beginTransaction();
         button.setOnClickListener(view -> {
@@ -93,7 +93,7 @@ public class ProfileFragment extends Fragment {
     /*public void openSettings(){
         Intent intent = new Intent(this, SettingsFragment.class);
         startActivity(intent);
-    }*/
+    }
 
 
     public void updEmail(){
@@ -128,6 +128,6 @@ public class ProfileFragment extends Fragment {
 
     }
 
-
+*/
 
 }
