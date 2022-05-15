@@ -37,25 +37,24 @@
                 app:layout_constraintTop_toBottomOf="@+id/text_search_outdoor">
 
                 <ImageButton
-                    android:id="@+id/category1"
+                    android:id="@+id/udendoerssport"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
                     android:contentDescription="@string/category1"
-                    android:src="@drawable/outdoor_156x96px"
-                    />
+                    android:src="@drawable/udendoerssport_156x96px" />
 
                 <ImageButton
-                    android:id="@+id/category2"
+                    android:id="@+id/vildmark"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
                     android:contentDescription="@string/category2"
-                    android:src="@drawable/outdoor_156x96px" />
+                    android:src="@drawable/vildmark_156x96px" />
 
             </LinearLayout>
 
@@ -87,24 +86,24 @@
                 app:layout_constraintVertical_bias="0.0">
 
                 <ImageButton
-                    android:id="@+id/category3"
+                    android:id="@+id/indendoerssport"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
                     android:contentDescription="@string/category3"
-                    android:src="@drawable/outdoor_156x96px" />
+                    android:src="@drawable/indendoerssport_156x96px" />
 
                 <ImageButton
-                    android:id="@+id/category4"
+                    android:id="@+id/hjemkundskab"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
                     android:contentDescription="@string/category4"
-                    android:src="@drawable/outdoor_156x96px" />
+                    android:src="@drawable/hjemkundskab_156x96px" />
 
             </LinearLayout>
 
