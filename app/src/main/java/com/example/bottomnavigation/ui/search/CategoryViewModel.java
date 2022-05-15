@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel;
 import java.util.ArrayList;
 
 public class CategoryViewModel extends ViewModel{
-
+    private Place place;
     private final MutableLiveData<ArrayList<Place>> allPlaces;
 
 public CategoryViewModel() {

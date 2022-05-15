@@ -45,7 +45,7 @@ public class SearchFragment extends Fragment /*implements View.OnClickListener*/
         imageButton1.setOnClickListener(view -> {
             fr.replace(R.id.nav_host_fragment_activity_main,new CategoryFragment());
             fr.commit();
-
+        //evt. brug room til at gemme arraylisten
         });
 
         /*imageButton2.setOnClickListener(this);

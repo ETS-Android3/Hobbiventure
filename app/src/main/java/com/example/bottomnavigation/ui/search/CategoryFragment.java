@@ -45,7 +45,7 @@ public class CategoryFragment extends Fragment {
         udendoersSportList.add(new Place("Aarhus Ø - Surf", R.drawable.aarhus___surf));
         udendoersSportList.add(new Place("Aarhus Watersports Complex - Watersports", R.drawable.aarhus_watersports_complex));
 
-        ArrayList<Place> vildmarkList= new ArrayList<>();
+    /*    ArrayList<Place> vildmarkList= new ArrayList<>();
         vildmarkList.add(new Place("247outdoor - Mountainbiking", R.drawable._47outdoor));
         vildmarkList.add(new Place("Mols Bjerge - Vandring", R.drawable.mols_bjerge));
         vildmarkList.add(new Place("12. Århus Gruppe - Spejder", R.drawable.aarhusgruppe));
@@ -66,7 +66,7 @@ public class CategoryFragment extends Fragment {
         indendoersSportList.add(new Place("Gellerupbadet - Svømning", R.drawable.gellerupbadet));
         indendoersSportList.add(new Place("Hasle Tennisklub - Tennis", R.drawable.hasle_tennisklub));
         indendoersSportList.add(new Place("Aarhus Klatreklub - Klatring", R.drawable.aarhus_klatreklub));
-
+*/
         placeAdaptor = new PlaceAdaptor(udendoersSportList);
        // placeAdaptor = new PlaceAdaptor(vildmarkList);
        // placeAdaptor = new PlaceAdaptor(hjemkundskabList);
