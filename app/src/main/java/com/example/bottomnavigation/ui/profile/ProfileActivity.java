@@ -56,19 +56,11 @@ public class ProfileActivity extends AppCompatActivity {
         button2.setOnClickListener(view -> {
             updPassword();
         });
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSettings();
-            }
-        });
+
 
     }
 
-public void openSettings(){
-    Intent intent = new Intent(this, SettingsActivity.class);
-    startActivity(intent);
-}
+
 
 
     public void updEmail(){

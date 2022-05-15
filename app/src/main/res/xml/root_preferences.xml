@@ -1,11 +1,13 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory app:title="@string/messages_header">
+    <PreferenceCategory app:title="Notifications">
 
-        <EditTextPreference
-            app:key="signature"
-            app:title="@string/signature_title"
-            app:useSimpleSummaryProvider="true" />
+        <SwitchPreferenceCompat
+            app:title="Enable Notifications"
+            app:key="NotifyMe"
+            app:summaryOff="You will not receive notifications of events from Hobbiventure"
+            app:summaryOn="You will receive notification of events and Hobbies from Hobbieventure"/>
 
         <ListPreference
             app:defaultValue="reply"
@@ -23,13 +25,22 @@
             app:key="sync"
             app:title="@string/sync_title" />
 
-        <SwitchPreferenceCompat
-            app:dependency="sync"
-            app:key="attachment"
-            app:summaryOff="@string/attachment_summary_off"
-            app:summaryOn="@string/attachment_summary_on"
-            app:title="@string/attachment_title" />
 
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="help_category"
+        app:title="Help">
+
+       <SwitchPreferenceCompat app:key="helpSwitch"
+           app:title="Enable Usage Feedback"
+           app:summary="Send Usage data to Hobbiventure for Crash reports"/>
+
+        <EditTextPreference app:key="Signature"
+            app:dependency="helpSwitch"
+            app:title="@string/signature_title"
+            app:summary="Write your signature for crash reports"/>
     </PreferenceCategory>
 
 </PreferenceScreen>
