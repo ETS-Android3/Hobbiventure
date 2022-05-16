@@ -21,7 +21,6 @@ public class PlaceAdaptor extends RecyclerView.Adapter<PlaceAdaptor.ViewHolder> 
         View view = inflater.inflate(R.layout.category_lists, parent, false);
         return new ViewHolder(view);
     }
-
     private ArrayList<Place> places;
 
     PlaceAdaptor(ArrayList<Place> places) {

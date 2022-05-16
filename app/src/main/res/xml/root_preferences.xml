@@ -1,20 +1,21 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <PreferenceCategory app:title="Notifications">
 
         <SwitchPreferenceCompat
-            app:title="Enable Notifications"
             app:key="NotifyMe"
             app:summaryOff="You will not receive notifications of events from Hobbiventure"
-            app:summaryOn="You will receive notification of events and Hobbies from Hobbieventure"/>
+            app:summaryOn="You will receive notification of events and Hobbies from Hobbieventure"
+            app:title="Enable Notifications" />
 
         <ListPreference
             app:defaultValue="reply"
+            app:dependency="NotifyMe"
             app:entries="@array/reply_entries"
             app:entryValues="@array/reply_values"
             app:key="reply"
-            app:title="@string/reply_title"
+            app:title="Notification style"
             app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
@@ -23,8 +24,9 @@
 
         <SwitchPreferenceCompat
             app:key="sync"
-            app:title="@string/sync_title" />
+            app:title="Sync Email with Hobbiventure" />
 
+        <SwitchPreferenceCompat app:title="Sync Contacts with Hobbiventure" />
 
 
     </PreferenceCategory>
@@ -33,14 +35,16 @@
         app:key="help_category"
         app:title="Help">
 
-       <SwitchPreferenceCompat app:key="helpSwitch"
-           app:title="Enable Usage Feedback"
-           app:summary="Send Usage data to Hobbiventure for Crash reports"/>
+        <SwitchPreferenceCompat
+            app:key="helpSwitch"
+            app:summary="Send data usage to Hobbiventure for Crash reports and Development"
+            app:title="Enable Usage Feedback" />
 
-        <EditTextPreference app:key="Signature"
+        <EditTextPreference
             app:dependency="helpSwitch"
+            app:key="Signature"
             app:title="@string/signature_title"
-            app:summary="Write your signature for crash reports"/>
+            app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
 
 </PreferenceScreen>

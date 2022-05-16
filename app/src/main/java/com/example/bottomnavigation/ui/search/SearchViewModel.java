@@ -1,8 +1,5 @@
 package com.example.bottomnavigation.ui.search;
 
-import android.view.View;
-import android.widget.ImageButton;
-
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;

@@ -2,21 +2,23 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="3dp"
     android:background="#e4e4e4">
 
     <TextView
         android:id="@+id/tv_name"
+        style="@style/ListName"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        style="@style/ListName"
         android:text="@string/place_name" />
 
     <ImageView
         android:id="@+id/iv_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/outdoor_156x96px"
-        android:contentDescription="@string/place_image" />
+        android:layout_width="156dp"
+        android:layout_height="96dp"
+        android:contentDescription="@string/place_image"
+        android:scaleType="fitXY"
+        android:src="@drawable/vestereng_discgolf" />
 
 </LinearLayout>

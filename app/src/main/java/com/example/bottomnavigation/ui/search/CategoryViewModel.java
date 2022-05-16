@@ -6,16 +6,15 @@ import androidx.lifecycle.ViewModel;
 
 import java.util.ArrayList;
 
-public class CategoryViewModel extends ViewModel {
-
+public class CategoryViewModel extends ViewModel{
+    private Place place;
     private final MutableLiveData<ArrayList<Place>> allPlaces;
 
-    public CategoryViewModel() {
-        allPlaces = new MutableLiveData<>();
-        ArrayList<Place> newList = new ArrayList<>();
-        allPlaces.setValue(newList);
-    }
-
+public CategoryViewModel() {
+    allPlaces = new MutableLiveData<>();
+    ArrayList<Place> newList = new ArrayList<>();
+    allPlaces.setValue(newList);
+}
     public MutableLiveData<ArrayList<Place>> getList() {
         return allPlaces;
     }
