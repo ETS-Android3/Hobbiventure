@@ -77,6 +77,7 @@ public class CategoryFragment extends Fragment {
         placeList.hasFixedSize();
 
 
+
         return root;
     }
 

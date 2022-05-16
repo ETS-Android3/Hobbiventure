@@ -61,9 +61,9 @@ public class ProfileFragment extends Fragment {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(getContext(), "Email successfully updated! ", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "Email successfully updated!", Toast.LENGTH_SHORT).show();
                             }else{
-                                Toast.makeText(getContext(), "Something went wrong... ", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "Email update error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -77,9 +77,9 @@ public class ProfileFragment extends Fragment {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                               Toast.makeText(getContext(), "Password successfully updated! ", Toast.LENGTH_SHORT).show();
+                               Toast.makeText(getContext(), "Password successfully updated!", Toast.LENGTH_SHORT).show();
                             }else{
-                                Toast.makeText(getContext(), "Something went wrong... ", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "Password update error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
 
                         }
