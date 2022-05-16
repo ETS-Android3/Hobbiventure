@@ -48,7 +48,11 @@ public class ResultFragment extends Fragment {
         udendoersSportList.add(new Place("Vestereng - Discgolf"));
         udendoersSportList.add(new Place("Aarhus Ø - Surf"));
         udendoersSportList.add(new Place("Aarhus Watersports Complex - Watersports"));
-        udendoersSportList.add(new Place("Aarhus Watersports Complex - Watersports"));
+        udendoersSportList.add(new Place("Boulders- Climbing"));
+        udendoersSportList.add(new Place("Aarhus RoKlub - WaterSports"));
+        udendoersSportList.add(new Place("Trailfriends - Løb"));
+        udendoersSportList.add(new Place("March with homies - Løb"));
+        udendoersSportList.add(new Place("TESTTEST - WHEY"));
 
         Collections.shuffle(udendoersSportList);
         resultAdapter = new ResultAdapter(udendoersSportList);
