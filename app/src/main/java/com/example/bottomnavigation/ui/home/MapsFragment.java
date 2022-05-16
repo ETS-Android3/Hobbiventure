@@ -36,13 +36,17 @@ public class MapsFragment extends Fragment {
         mapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady( GoogleMap googleMap) {
+                LatLng BouldersAarhus = new LatLng(56.20504565808364, 10.18151342350171);
+                googleMap.addMarker(new MarkerOptions().position(BouldersAarhus).title("Aarhus Boulders"));
+                googleMap.moveCamera(CameraUpdateFactory.newLatLng(BouldersAarhus));
+                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(BouldersAarhus, 15));
+
                 googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
                     @Override
                     public void onMapClick(LatLng latLng) {
                         MarkerOptions markerOptions = new MarkerOptions();
                         markerOptions.position(latLng);
-
-                        markerOptions.title(latLng.latitude + "56.20504565808364, 10.18151342350171" + latLng.longitude);
+                        markerOptions.title(latLng.latitude + " " + latLng.longitude);
                         googleMap.clear();
                         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
                         googleMap.addMarker(markerOptions);
