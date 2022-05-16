@@ -26,6 +26,8 @@ public class HistoryFragment extends Fragment {
 
         final TextView textView = binding.textHistory;
         historyViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
+
         return root;
     }
 

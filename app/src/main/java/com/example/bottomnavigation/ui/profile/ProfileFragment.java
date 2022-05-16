@@ -21,6 +21,8 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.bottomnavigation.LoginActivity;
+import com.example.bottomnavigation.MainActivity;
 import com.example.bottomnavigation.R;
 import com.example.bottomnavigation.databinding.FragmentProfileBinding;
 import com.example.bottomnavigation.ui.search.CategoryFragment;
@@ -60,14 +62,16 @@ public class ProfileFragment extends Fragment {
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
                                 //Toast.makeText(fragment., "Email successfully updated! ", Toast.LENGTH_SHORT).show();
-
+                                Log.d(TAG, "Email successfully updated!");
                             }else{
                                 // Toast.makeText(activity, "Something went wrong... ", Toast.LENGTH_SHORT).show();
+                                Log.d(TAG, "Something went wrong...");
                             }
                         }
                     });
-
+            editText.setText("");
         });
+
         button3.setOnClickListener(view -> {
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             user.updatePassword(editText1.getText().toString())
@@ -75,16 +79,20 @@ public class ProfileFragment extends Fragment {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                //   Toast.makeText(ProfileFragment, "Password successfully updated! ", Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(ProfileFragment., "Password successfully updated! ", Toast.LENGTH_SHORT).show();
+                                // Log.d(TAG, "Password successfully updated!");
                             }else{
                                 //  Toast.makeText(ProfileFragment, "Something went wrong... ", Toast.LENGTH_SHORT).show();
+                                Log.d(TAG, "Something went wrong...");
                             }
                         }
                     });
+            editText1.setText("");
         });
         return root;
 
     }
+
 
 
     @Override
