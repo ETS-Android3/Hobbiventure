@@ -16,7 +16,7 @@ public class SurveyViewModel extends ViewModel {
 
     public SurveyViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Do you prefer to be active outside");
+        mText.setValue("Hit a question button to begin the survey");
 
 
     }

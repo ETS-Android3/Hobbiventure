@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/azimn/AndroidStudioProjects/Hobbiventure2/app/src/main/res/layout/fragment_search.xml" value="0.3046875" />
+        <entry key="..\:/Users/azimn/AndroidStudioProjects/Hobbiventure2/app/src/main/res/layout/fragment_survey.xml" value="0.22" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/Bottomnavigation/app/src/main/res/layout/activity_category_lists.xml" value="0.1796875" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/Bottomnavigation/app/src/main/res/layout/activity_login.xml" value="0.1796875" />
         <entry key="..\:/Users/jonas/AndroidStudioProjects/Bottomnavigation/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />

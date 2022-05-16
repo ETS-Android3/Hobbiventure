@@ -4,13 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.bottomnavigation.databinding.FragmentSearchBinding;
+import com.example.bottomnavigation.R;
 import com.example.bottomnavigation.databinding.FragmentSurveyBinding;
 
 public class SurveyFragment extends Fragment {
@@ -22,10 +24,50 @@ public class SurveyFragment extends Fragment {
         SurveyViewModel surveyViewModel =
                 new ViewModelProvider(this).get(SurveyViewModel.class);
 
+
         binding = FragmentSurveyBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textSurvey;
+        final CheckBox checkbox1 = binding.checkBox;
+        final CheckBox checkbox2 = binding.checkBox2;
+        final CheckBox checkbox3 = binding.checkBox3;
+        final Button button1 = binding.confirmButton;
+        final Button button2 = binding.confirmButton2;
+        final Button button3 = binding.confirmButton3;
+        final Button button4 = binding.confirmButton4;
+        final Button button5 = binding.confirmButton5;
+
+
+        button1.setOnClickListener(view -> {
+            checkbox1.setChecked(false);
+            checkbox2.setChecked(false);
+            checkbox3.setChecked(false);
+            textView.setText("Do you prefer to practise activities outside?");
+        });
+
+        button2.setOnClickListener(view -> {
+            checkbox1.setChecked(false);
+            checkbox2.setChecked(false);
+            checkbox3.setChecked(false);
+            textView.setText("Do you prefer to run or walk?");
+        });
+
+        button3.setOnClickListener(view -> {
+            checkbox1.setChecked(false);
+            checkbox2.setChecked(false);
+            checkbox3.setChecked(false);
+            textView.setText("Do you often create something artistic?");
+        });
+
+        button4.setOnClickListener(view -> {
+            checkbox1.setChecked(false);
+            checkbox2.setChecked(false);
+            checkbox3.setChecked(false);
+            textView.setText("Do you expect to practice an activity for 5+ hours a week?");
+        });
+
+
         surveyViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
@@ -35,4 +77,8 @@ public class SurveyFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+
+
+
 }
