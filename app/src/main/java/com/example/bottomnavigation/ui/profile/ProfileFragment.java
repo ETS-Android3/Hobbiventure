@@ -61,11 +61,9 @@ public class ProfileFragment extends Fragment {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                //Toast.makeText(fragment., "Email successfully updated! ", Toast.LENGTH_SHORT).show();
-                                Log.d(TAG, "Email successfully updated!");
+                                Toast.makeText(getContext(), "Email successfully updated! ", Toast.LENGTH_SHORT).show();
                             }else{
-                                // Toast.makeText(activity, "Something went wrong... ", Toast.LENGTH_SHORT).show();
-                                Log.d(TAG, "Something went wrong...");
+                                Toast.makeText(getContext(), "Something went wrong... ", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -79,12 +77,11 @@ public class ProfileFragment extends Fragment {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                               // Toast.makeText(ProfileFragment., "Password successfully updated! ", Toast.LENGTH_SHORT).show();
-                                // Log.d(TAG, "Password successfully updated!");
+                               Toast.makeText(getContext(), "Password successfully updated! ", Toast.LENGTH_SHORT).show();
                             }else{
-                                //  Toast.makeText(ProfileFragment, "Something went wrong... ", Toast.LENGTH_SHORT).show();
-                                Log.d(TAG, "Something went wrong...");
+                                Toast.makeText(getContext(), "Something went wrong... ", Toast.LENGTH_SHORT).show();
                             }
+
                         }
                     });
             editText1.setText("");

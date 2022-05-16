@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.bottomnavigation.R;
@@ -21,7 +22,6 @@ public class SurveyFragment extends Fragment {
 
     private FragmentSurveyBinding binding;
 
-    @SuppressLint("SetTextI18n")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         SurveyViewModel surveyViewModel = new ViewModelProvider(this).get(SurveyViewModel.class);
@@ -38,6 +38,14 @@ public class SurveyFragment extends Fragment {
         final Button button3 = binding.confirmButton3;
         final Button button4 = binding.confirmButton4;
         final Button button5 = binding.SaveButton;
+        final Button button6 = binding.resultBtn;
+
+        final FragmentTransaction fr = getParentFragmentManager().beginTransaction();
+
+        button6.setOnClickListener(view -> {
+        fr.replace(R.id.nav_host_fragment_activity_main, new ResultFragment());
+        fr.commit();
+        });
 
         button1.setOnClickListener(view -> {
             String result = "Selected checkbox";
