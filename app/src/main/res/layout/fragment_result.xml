@@ -40,7 +40,9 @@
             android:id="@+id/rvActivities"
             android:layout_width="350dp"
             android:layout_height="371dp"
-            android:layout_margin="20dp" />
+            android:layout_margin="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

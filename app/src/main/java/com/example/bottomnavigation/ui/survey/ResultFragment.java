@@ -24,7 +24,7 @@ public class ResultFragment extends Fragment {
     private FragmentResultBinding binding;
     ResultAdapter resultAdapter;
 
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater,  ViewGroup container, Bundle savedInstanceState) {
         ResultViewModel resultViewModel = new ViewModelProvider(this).get(ResultViewModel.class);
 
         binding = FragmentResultBinding.inflate(inflater, container, false);

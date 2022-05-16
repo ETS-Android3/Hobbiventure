@@ -16,6 +16,9 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
 
 
 
+ResultAdapter(ArrayList<Place> places) {
+        this.places = places;
+        }
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -23,12 +26,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder
         View view = inflater.inflate(R.layout.category_lists, parent, false);
         return new ViewHolder(view);
         }
-
     private ArrayList<Place> places;
-
-    ResultAdapter(ArrayList<Place> places) {
-        this.places = places;
-    }
 
 public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         viewHolder.name.setText(places.get(position).getName());

@@ -7,9 +7,9 @@ import androidx.lifecycle.ViewModel;
 import java.util.ArrayList;
 
 public class ResultViewModel extends ViewModel {
-
-    private final MutableLiveData<ArrayList<Place>> allPlaces;
     private Place place;
+    private final MutableLiveData<ArrayList<Place>> allPlaces;
+
 
     public ResultViewModel() {
         allPlaces = new MutableLiveData<>();
