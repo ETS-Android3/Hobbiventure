@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.history.HistoryFragment">
 
+
     <TextView
         android:id="@+id/text_history"
         android:layout_width="399dp"
@@ -21,6 +22,7 @@
 
     </TextView>
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvActivities"
         android:layout_width="350dp"
@@ -32,5 +34,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_history"
         tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonMaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last visited hobby"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
