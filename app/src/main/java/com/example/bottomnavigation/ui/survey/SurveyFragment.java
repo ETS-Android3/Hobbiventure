@@ -67,6 +67,7 @@ public class SurveyFragment extends Fragment {
             checkbox3.setChecked(false);
             textView.setText("Do you expect to practice an activity for 5+ hours a week?");
         });
+
         button5.setOnClickListener(view -> {
             String result = "Selected answer";
             if(checkbox1.isChecked()){

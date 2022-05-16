@@ -14,8 +14,10 @@
         android:text="@string/Question4"
         app:layout_constraintBottom_toTopOf="@+id/confirm_button4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_button5">
+        app:layout_constraintTop_toBottomOf="@+id/confirm_button5"
+        app:layout_constraintVertical_bias="0.135">
 
     </Button>
 
@@ -50,11 +52,11 @@
         android:id="@+id/confirm_button4"
         android:layout_width="148dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/Next"
+        android:layout_marginBottom="188dp"
+        android:text="question 5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent">
 
     </Button>
@@ -126,6 +128,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox"
         app:layout_constraintVertical_bias="0.158" />
+
+    <Button
+        android:id="@+id/result_btn"
+        android:layout_width="202dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="64dp"
+        android:text="Results"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_button4"
+        app:layout_constraintVertical_bias="0.894" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
