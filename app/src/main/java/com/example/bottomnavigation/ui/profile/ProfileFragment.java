@@ -60,6 +60,7 @@ public class ProfileFragment extends Fragment {
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
                                 //Toast.makeText(fragment., "Email successfully updated! ", Toast.LENGTH_SHORT).show();
+
                             }else{
                                 // Toast.makeText(activity, "Something went wrong... ", Toast.LENGTH_SHORT).show();
                             }
