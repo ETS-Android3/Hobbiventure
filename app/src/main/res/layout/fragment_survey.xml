@@ -7,60 +7,6 @@
     tools:context=".ui.survey.SurveyFragment">
 
 
-    <Button
-        android:id="@+id/confirm_button3"
-        android:layout_width="146dp"
-        android:layout_height="48dp"
-        android:text="@string/Question4"
-        app:layout_constraintBottom_toTopOf="@+id/confirm_button4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_button5"
-        app:layout_constraintVertical_bias="0.135">
-
-    </Button>
-
-    <Button
-        android:id="@+id/confirm_button2"
-        android:layout_width="132dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/Question2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_button">
-
-    </Button>
-
-
-    <Button
-        android:id="@+id/confirm_button5"
-        android:layout_width="136dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/Question3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_button2">
-
-    </Button>
-
-    <Button
-        android:id="@+id/confirm_button4"
-        android:layout_width="148dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="188dp"
-        android:text="question 5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </Button>
-
     <TextView
         android:id="@+id/text_survey"
         android:layout_width="match_parent"
@@ -71,51 +17,8 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225"
-        tools:layout_editor_absoluteX="22dp" />
-
-    <Button
-        android:id="@+id/confirm_button"
-        android:layout_width="135dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/Question1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2">
-
-    </Button>
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/yes"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_survey" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/not_sure"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_survey" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="66dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/no"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/checkBox2"
-        app:layout_constraintTop_toBottomOf="@+id/text_survey" />
+        app:layout_constraintVertical_bias="0.166"
+        tools:layout_editor_absoluteX="16dp" />
 
     <Button
         android:id="@+id/SaveButton"
@@ -124,10 +27,112 @@
         android:text="@string/submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintHorizontal_bias="0.016"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox"
-        app:layout_constraintVertical_bias="0.158" />
+        app:layout_constraintVertical_bias="0.135" />
+
+    <Button
+        android:id="@+id/confirm_button2"
+        android:layout_width="132dp"
+        android:layout_height="48dp"
+        android:text="@string/Question2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toEndOf="@+id/SaveButton"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3"
+        app:layout_constraintVertical_bias="0.157">
+
+    </Button>
+
+    <Button
+        android:id="@+id/confirm_button5"
+        android:layout_width="138dp"
+        android:layout_height="51dp"
+        android:text="@string/Question3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_button"
+        app:layout_constraintVertical_bias="0.105">
+
+    </Button>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/yes"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox2"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_survey" />
+
+    <Button
+        android:id="@+id/confirm_button3"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:text="@string/Question4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.992"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_button2"
+        app:layout_constraintVertical_bias="0.143">
+
+    </Button>
+
+    <Button
+        android:id="@+id/confirm_button4"
+        android:layout_width="148dp"
+        android:layout_height="48dp"
+        android:text="question 5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_button5"
+        app:layout_constraintVertical_bias="0.215">
+
+    </Button>
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/not_sure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_survey" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="66dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toEndOf="@+id/checkBox2"
+        app:layout_constraintTop_toBottomOf="@+id/text_survey" />
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="135dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/Question1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toEndOf="@+id/SaveButton"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2">
+
+    </Button>
 
     <Button
         android:id="@+id/result_btn"
@@ -137,10 +142,10 @@
         android:text="Results"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintHorizontal_bias="0.952"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirm_button4"
-        app:layout_constraintVertical_bias="0.894" />
+        app:layout_constraintVertical_bias="0.156" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
