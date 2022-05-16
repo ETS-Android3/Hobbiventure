@@ -14,6 +14,8 @@ import com.example.bottomnavigation.R;
 import java.util.ArrayList;
 
 public class PlaceAdaptor extends RecyclerView.Adapter<PlaceAdaptor.ViewHolder> {
+
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

@@ -41,22 +41,28 @@ public class ResultFragment extends Fragment {
         });
 
         ArrayList<Place> udendoersSportList = new ArrayList<>();
-        udendoersSportList.add(new com.example.bottomnavigation.ui.survey.Place("Asa Fodboldklub - Fodbold"));
-        udendoersSportList.add(new com.example.bottomnavigation.ui.survey.Place("Aarhus 1900 - Atletik"));
-        udendoersSportList.add(new com.example.bottomnavigation.ui.survey.Place("True Skov - Løb"));
-        udendoersSportList.add(new com.example.bottomnavigation.ui.survey.Place("Marselisborgskovene - Cykel"));
-        udendoersSportList.add(new com.example.bottomnavigation.ui.survey.Place("Vestereng - Discgolf"));
-        udendoersSportList.add(new com.example.bottomnavigation.ui.survey.Place("Aarhus Ø - Surf"));
-        udendoersSportList.add(new com.example.bottomnavigation.ui.survey.Place("Aarhus Watersports Complex - Watersports"));
+        udendoersSportList.add(new Place("Asa Fodboldklub - Fodbold"));
+        udendoersSportList.add(new Place("Aarhus 1900 - Atletik"));
+        udendoersSportList.add(new Place("True Skov - Løb"));
+        udendoersSportList.add(new Place("Marselisborgskovene - Cykel"));
+        udendoersSportList.add(new Place("Vestereng - Discgolf"));
+        udendoersSportList.add(new Place("Aarhus Ø - Surf"));
+        udendoersSportList.add(new Place("Aarhus Watersports Complex - Watersports"));
 
 
 
         resultAdapter = new ResultAdapter(udendoersSportList);
         recyclerView.setAdapter(resultAdapter);
-        recyclerView.hasFixedSize();
 
         return root;
+    }
 
-
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        final FragmentTransaction fr = getParentFragmentManager().beginTransaction();
+        fr.detach(ResultFragment.this);
+        fr.commit();
+        binding = null;
     }
 }
