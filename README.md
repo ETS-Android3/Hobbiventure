@@ -26,6 +26,7 @@ Business Administrator = Developer/Maintainer/Service of application.
 | User         | Want to be able to read a short description about a hobby  |  I can get introduced to the subject | 1 |<ul><li>[x] </li></ul>|
 | User         | Want to see information about the hobby-locations  |  I have everything I need to know, inside the app | 1 |<ul><li>[ ] </li></ul>|
 | User         | Want to be able to find free hobbies  | I’m not required to pay for everything | 1 |<ul><li>[ ] </li></ul>|
+| User         | Want to be able to get contact support  | I wan't personal help if I'm in doubt  | 1 |<ul><li>[x] </li></ul>|
 | Business Administrator | Want to save data  | The application can be edited | 1 |<ul><li>[x] </li></ul>|
 | Business Administrator | Want the client’s information  | I can easily contact them | 1 |<ul><li>[x] </li></ul>|
 | User         | Want to login  | I can save my information | 2 |<ul><li>[x] </li></ul>|
