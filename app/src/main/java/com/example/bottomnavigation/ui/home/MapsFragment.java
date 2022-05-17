@@ -18,7 +18,10 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.ArrayList;
 
 
 public class MapsFragment extends Fragment {
@@ -26,29 +29,46 @@ public class MapsFragment extends Fragment {
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
 
+    LatLng Arca = new LatLng(56.17412924773975, 10.185340046325729);
+    LatLng Boulders = new LatLng(56.20504565808364, 10.18151342350171);
+    LatLng Godsbanen = new LatLng(56.15361873942693, 10.193762196514863);
+    LatLng Aros = new LatLng(56.15400659203265, 10.199630598366113);
+    LatLng TaekwondoChungMoo = new LatLng(56.15608810830972, 10.18099313090452);
+    LatLng BadmintonDGI = new LatLng(56.14913702381054, 10.206323811702811);
+
+
+    private Marker markerBoulders;
+    private Marker markerArca;
+    private Marker markerGodsbanen;
+    private Marker markerAros;
+    private Marker markerBadmintonDGI;
+    private Marker markerTaekwondoChungMoo;
+
+
+            /*ArrayList<LatLng> MapList = new ArrayList<>();
+            MapList.add(Boulders);*/
+
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         HistoryViewModel historyViewModel = new ViewModelProvider(this).get(HistoryViewModel.class);
         View view = inflater.inflate(R.layout.activity_maps, container, false);
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
-            public void onMapReady( GoogleMap googleMap) {
-                LatLng BouldersAarhus = new LatLng(56.20504565808364, 10.18151342350171);
-                googleMap.addMarker(new MarkerOptions().position(BouldersAarhus).title("Aarhus Boulders"));
-                googleMap.moveCamera(CameraUpdateFactory.newLatLng(BouldersAarhus));
-                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(BouldersAarhus, 15));
+            public void onMapReady(@NonNull GoogleMap googleMap) {
+                markerBoulders = googleMap.addMarker(new MarkerOptions().position(Boulders).title("Boulders Aarhus"));
+                markerBoulders.setTag(0);
+                markerArca = googleMap.addMarker(new MarkerOptions().position(Arca).title("Arca Crossfit Snedkeriget"));
+                markerArca.setTag(0);
+                markerGodsbanen = googleMap.addMarker(new MarkerOptions().position(Godsbanen).title("Kulturforening Godsbanen"));
+                markerGodsbanen.setTag(0);
+                markerAros = googleMap.addMarker(new MarkerOptions().position(Aros).title("Aros Kunstmuseum"));
+                markerAros.setTag(0);
+                markerBadmintonDGI = googleMap.addMarker(new MarkerOptions().position(BadmintonDGI).title("DGI Badminton klub, Fitness & Sports Center"));
+                markerBadmintonDGI.setTag(0);
+                markerTaekwondoChungMoo = googleMap.addMarker(new MarkerOptions().position(TaekwondoChungMoo).title("Aarhus Taekwondo Club Chung Moo"));
+                markerTaekwondoChungMoo.setTag(0);
 
-                googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-                    @Override
-                    public void onMapClick(LatLng latLng) {
-                        MarkerOptions markerOptions = new MarkerOptions();
-                        markerOptions.position(latLng);
-                        markerOptions.title(latLng.latitude + " " + latLng.longitude);
-                        googleMap.clear();
-                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
-                        googleMap.addMarker(markerOptions);
-                    }
-                });
+                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Aros, 13));
             }
         });
         return view;
@@ -63,22 +83,25 @@ public class MapsFragment extends Fragment {
         binding = null;
     }
 }
-
-/**
- * Manipulates the map once available.
- * This callback is triggered when the map is ready to be used.
- * This is where we can add markers or lines, add listeners or move the camera. In this case,
- * we just add a marker near Sydney, Australia.
- * If Google Play services is not installed on the device, the user will be prompted to install
- * it inside the SupportMapFragment. This method will only be triggered once the user has
- * installed Google Play services and returned to the app.
- *
- * @Override public void onMapReady(GoogleMap googleMap) {
- * mMap = googleMap;
- * <p>
- * // Add a marker in Sydney and move the camera
- * LatLng BouldersAarhus = new LatLng(56.20504565808364, 10.18151342350171);
- * mMap.addMarker(new MarkerOptions().position(BouldersAarhus).title("Marker on Aarhus Boulders"));
- * mMap.moveCamera(CameraUpdateFactory.newLatLng(BouldersAarhus));
- * }
- */
+ /*  @Override
+            public void onMapReady( GoogleMap googleMap) {
+                LatLng BouldersAarhus = new LatLng(56.20504565808364, 10.18151342350171);
+                googleMap.addMarker(new MarkerOptions().position(BouldersAarhus).title("Aarhus Boulders"));
+                googleMap.moveCamera(CameraUpdateFactory.newLatLng(BouldersAarhus));
+                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(BouldersAarhus, 5));
+                LatLng Arca = new LatLng(56.17412924773975, 10.185340046325729);
+                googleMap.addMarker(new MarkerOptions().position(Arca).title("Arca Crossfit"));
+                googleMap.moveCamera(CameraUpdateFactory.newLatLng(Arca));
+                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Arca, 15));
+                googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+                    @Override
+                    public void onMapClick(LatLng latLng) {
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.position(latLng);
+                        markerOptions.title(latLng.latitude + " " + latLng.longitude);
+                        googleMap.clear();
+                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
+                        googleMap.addMarker(markerOptions);
+                    }
+                });
+            }*/

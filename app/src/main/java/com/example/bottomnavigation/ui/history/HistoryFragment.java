@@ -25,6 +25,7 @@ public class HistoryFragment extends Fragment {
     HistoryAdapter historyAdapter;
 
 
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         HistoryViewModel historyViewModel =
@@ -38,6 +39,7 @@ public class HistoryFragment extends Fragment {
         recyclerView.hasFixedSize();
 
         ArrayList<History> histories = new ArrayList<>();
+
         histories.add(new History("Asa Fodboldklub - Fodbold"));
         histories.add(new History("Asa f - Fodbold"));
         histories.add(new History("Asa f - d"));

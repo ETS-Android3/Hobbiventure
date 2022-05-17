@@ -15,6 +15,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.bottomnavigation.databinding.FragmentSearchBinding;
+import com.example.bottomnavigation.ui.home.MapsFragment;
+import com.example.bottomnavigation.ui.profile.SettingsFragment;
 
 
 public class SearchFragment extends Fragment /*implements View.OnClickListener*/ {
@@ -36,6 +38,7 @@ public class SearchFragment extends Fragment /*implements View.OnClickListener*/
         final ImageButton imageButton2 = binding.vildmark;
         final ImageButton imageButton3 = binding.indendoerssport;
         final ImageButton imageButton4 = binding.hjemkundskab;
+        final ImageButton top10 = binding.event1;
         final TextView outdoor = binding.textSearchOutdoor;
         final TextView indoor = binding.textSearchIndoor;
         final TextView events = binding.textSearchEvents;
@@ -43,6 +46,10 @@ public class SearchFragment extends Fragment /*implements View.OnClickListener*/
         searchViewModel.getTextIndoor().observe(getViewLifecycleOwner(), indoor::setText);
         searchViewModel.getTextEvents().observe(getViewLifecycleOwner(), events::setText);
 
+        final FragmentTransaction fr = getParentFragmentManager().beginTransaction();
+        top10.setOnClickListener(view -> {
+            fr.replace(R.id.nav_host_fragment_activity_main,new MapsFragment());
+            fr.commit();});
         imageButton1.setOnClickListener(view -> {
             Intent intent = new Intent();
             intent.setClass(getActivity(), CategoryActivityUdendoers.class);
@@ -64,7 +71,7 @@ public class SearchFragment extends Fragment /*implements View.OnClickListener*/
             getActivity().startActivity(intent);
         });
 
-        /*imageButton2.setOnClickListener(this);
+        /*
         imageButton3.setOnClickListener(this);
         imageButton4.setOnClickListener(this);*/
         return root;
