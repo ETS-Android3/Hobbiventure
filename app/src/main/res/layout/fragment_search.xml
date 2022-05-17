@@ -142,7 +142,7 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
                     android:contentDescription="@string/event1"
-                    android:src="@drawable/outdoor_156x96px" />
+                    android:src="@drawable/top10" />
 
                 <ImageButton
                     android:id="@+id/event2"
