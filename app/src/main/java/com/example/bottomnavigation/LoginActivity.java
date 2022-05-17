@@ -1,11 +1,13 @@
 package com.example.bottomnavigation;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,10 +23,12 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private static final String FILE_NAME = "myFile";
     TextInputEditText etLoginEmail;
     TextInputEditText etLoginPassword;
     TextView tvRegisterHere;
     Button btnLogin;
+    CheckBox rememberMe;
 
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
@@ -37,18 +41,45 @@ public class LoginActivity extends AppCompatActivity {
         etLoginPassword = findViewById(R.id.etLoginPass);
         tvRegisterHere = findViewById(R.id.tvRegisterHere);
         btnLogin = findViewById(R.id.btnLogin);
-
+        rememberMe = findViewById(R.id.rememberMe);
         mAuth = FirebaseAuth.getInstance();
 
-        btnLogin.setOnClickListener(view -> {
-            loginUser();
+        SharedPreferences preferences = getSharedPreferences(FILE_NAME, MODE_PRIVATE);
+      String email = preferences.getString("email", " ");
+      String password = preferences.getString("password", " ");
+
+      etLoginEmail.setText(email);
+      etLoginPassword.setText(password);
+
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = etLoginEmail.getText().toString();
+                String password1 = etLoginPassword.getText().toString();
+                if (rememberMe.isChecked()) {
+                    StoredDataUsingSharedPreference(email, password1);
+                }
+                loginUser();
+            }
         });
+
+
+
         tvRegisterHere.setOnClickListener(view -> {
             startActivity(new Intent(this, RegisterActivity.class));
         });
 
 
     }
+
+    private void StoredDataUsingSharedPreference(String email, String password) {
+        SharedPreferences.Editor editor = getSharedPreferences(FILE_NAME, MODE_PRIVATE).edit();
+        editor.putString("email", email);
+        editor.putString("password", password);
+        editor.apply();
+    }
+
 
     public void loginUser() {
         String email = etLoginEmail.getText().toString();
@@ -73,6 +104,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             });
         }
+
     }
 
     @Override

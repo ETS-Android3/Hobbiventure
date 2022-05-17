@@ -24,6 +24,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.bottomnavigation.LoginActivity;
 import com.example.bottomnavigation.MainActivity;
 import com.example.bottomnavigation.R;
+import com.example.bottomnavigation.RegisterActivity;
 import com.example.bottomnavigation.databinding.FragmentProfileBinding;
 import com.example.bottomnavigation.ui.search.CategoryFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -46,12 +47,18 @@ public class ProfileFragment extends Fragment {
         final Button button = binding.button3;
         final Button button2 = binding.updateEmailBtn;
         final Button button3 = binding.updatePassBtn;
+        final Button button4 = binding.buttonSgnout;
         final EditText editText = binding.etUpdEmail;
         final EditText editText1 = binding.etUpdPass;
         final FragmentTransaction fr = getParentFragmentManager().beginTransaction();
         button.setOnClickListener(view -> {
             fr.replace(R.id.nav_host_fragment_activity_main,new SettingsFragment());
             fr.commit();
+        });
+
+      button4.setOnClickListener(view -> {
+          FirebaseAuth.getInstance().signOut();
+          moveToLoginActivity();
         });
 
         button2.setOnClickListener(view -> {
@@ -96,6 +103,13 @@ public class ProfileFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    private void moveToLoginActivity () {
+        Intent i = new Intent(getActivity(), LoginActivity.class);
+        startActivity(i);
+        ((Activity) getActivity()).overridePendingTransition(0, 0);
+
     }
 
 }
