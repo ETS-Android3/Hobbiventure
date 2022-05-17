@@ -17,12 +17,11 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
     HistoryAdapter(ArrayList<History> histories) {
         this.histories = histories;
     }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.result_list, parent, false);
+        View view = inflater.inflate(R.layout.fragment_history, parent, false);
         return new ViewHolder(view);
     }
 
@@ -45,9 +44,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
     ViewHolder(View itemView) {
         super(itemView);
-        name = itemView.findViewById(R.id.tv_name);
-    }
-    Random rand = new Random();
-}
+        name = itemView.findViewById(R.id.text_history);
+    }}
 }
 
