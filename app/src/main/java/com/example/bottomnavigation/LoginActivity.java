@@ -45,8 +45,8 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         SharedPreferences preferences = getSharedPreferences(FILE_NAME, MODE_PRIVATE);
-      String email = preferences.getString("email", " ");
-      String password = preferences.getString("password", " ");
+      String email = preferences.getString("email", "");
+      String password = preferences.getString("password", "");
 
       etLoginEmail.setText(email);
       etLoginPassword.setText(password);
