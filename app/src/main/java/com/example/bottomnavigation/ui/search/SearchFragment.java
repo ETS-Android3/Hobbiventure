@@ -12,23 +12,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.bottomnavigation.R;
-import com.example.bottomnavigation.RegisterActivity;
 import com.example.bottomnavigation.databinding.FragmentSearchBinding;
-
-import java.util.ArrayList;
 
 
 public class SearchFragment extends Fragment /*implements View.OnClickListener*/ {
 
     private FragmentSearchBinding binding;
     private CategoryViewModel mCategoryViewModel;
-
-
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -52,20 +44,24 @@ public class SearchFragment extends Fragment /*implements View.OnClickListener*/
         searchViewModel.getTextEvents().observe(getViewLifecycleOwner(), events::setText);
 
         imageButton1.setOnClickListener(view -> {
-            int id = view.getId();
             Intent intent = new Intent();
-            intent.setClass(getActivity(),CategoryActivity.class);
+            intent.setClass(getActivity(), CategoryActivityUdendoers.class);
             getActivity().startActivity(intent);
-
-
-
-
         });
         imageButton2.setOnClickListener(view -> {
             Intent intent = new Intent();
-            intent.setClass(getActivity(),CategoryActivity.class);
+            intent.setClass(getActivity(), CategoryActivityVildmark.class);
             getActivity().startActivity(intent);
-
+        });
+        imageButton3.setOnClickListener(view -> {
+            Intent intent = new Intent();
+            intent.setClass(getActivity(), CategoryActivityIndendoers.class);
+            getActivity().startActivity(intent);
+        });
+        imageButton4.setOnClickListener(view -> {
+            Intent intent = new Intent();
+            intent.setClass(getActivity(), CategoryActivityHjemkundsskab.class);
+            getActivity().startActivity(intent);
         });
 
         /*imageButton2.setOnClickListener(this);

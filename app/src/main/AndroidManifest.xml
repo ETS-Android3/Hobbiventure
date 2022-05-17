@@ -44,7 +44,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".ui.search.CategoryActivity" />
+        <activity android:name=".ui.search.CategoryActivityUdendoers" />
+        <activity android:name=".ui.search.CategoryActivityVildmark" />
+        <activity android:name=".ui.search.CategoryActivityIndendoers" />
+        <activity android:name=".ui.search.CategoryActivityHjemkundsskab" />
         <activity android:name=".RegisterActivity" />
     </application>
 
