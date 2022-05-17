@@ -61,8 +61,6 @@ Business Administrator = Developer/Maintainer/Service of application.
 ## Retrospektiv
 Vi må erkende at vores idé var baseret på en android app der fokuserer for meget på funktionalitet, og ikke så meget android specifikke elementer. Det har resulteret i at vi ikke har fået implementeret så meget af det funktionalitet vi havde sat os for, da vi har prioriteret de android elementer der er implementeret. 
 
-Mulige Networking API med Aarhus events: 
-https://www.opendata.dk/city-of-aarhus/eventdatabasen
-https://www.opendata.dk/city-of-aarhus/friluftslivtemaer_aarhus
-https://www.opendata.dk/city-of-aarhus/arrangementer-i-aarhus
-https://www.opendata.dk/city-of-aarhus/lokalsamfund-i-aarhus
+References:
+https://github.com/mitchtabian/MVVMExample1
+
