@@ -1,10 +1,12 @@
 package com.example.bottomnavigation.ui.search;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.example.bottomnavigation.ui.search.Place;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,9 +14,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.bottomnavigation.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PlaceAdaptor extends RecyclerView.Adapter<PlaceAdaptor.ViewHolder> {
+    private List<Place> mPlaces = new ArrayList<>();
+    private Context mContext;
 
+    public PlaceAdaptor(Context context, List<Place> places) {
+        mPlaces = places;
+        mContext = context;
+    }
 
     @NonNull
     @Override
@@ -23,20 +32,15 @@ public class PlaceAdaptor extends RecyclerView.Adapter<PlaceAdaptor.ViewHolder> 
         View view = inflater.inflate(R.layout.category_lists, parent, false);
         return new ViewHolder(view);
     }
-    private ArrayList<Place> places;
-
-    PlaceAdaptor(ArrayList<Place> places) {
-        this.places = places;
-    }
 
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
-        viewHolder.name.setText(places.get(position).getName());
-        viewHolder.icon.setImageResource(places.get(position).getIcon());
+        viewHolder.name.setText(mPlaces.get(position).getName());
+        viewHolder.icon.setImageResource(mPlaces.get(position).getIcon());
     }
 
     @Override
     public int getItemCount() {
-        return places.size();
+        return mPlaces.size();
     }
 
 

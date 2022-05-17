@@ -1,6 +1,7 @@
 package com.example.bottomnavigation.ui.search;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,13 +17,14 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.bottomnavigation.R;
+import com.example.bottomnavigation.RegisterActivity;
 import com.example.bottomnavigation.databinding.FragmentSearchBinding;
 
 
 public class SearchFragment extends Fragment /*implements View.OnClickListener*/ {
 
     private FragmentSearchBinding binding;
-
+    private CategoryViewModel mCategoryViewModel;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         SearchViewModel searchViewModel =
@@ -41,11 +43,10 @@ public class SearchFragment extends Fragment /*implements View.OnClickListener*/
         searchViewModel.getTextOutdoor().observe(getViewLifecycleOwner(), outdoor::setText);
         searchViewModel.getTextIndoor().observe(getViewLifecycleOwner(), indoor::setText);
         searchViewModel.getTextEvents().observe(getViewLifecycleOwner(), events::setText);
-        final FragmentTransaction fr = getParentFragmentManager().beginTransaction();
         imageButton1.setOnClickListener(view -> {
-            fr.replace(R.id.nav_host_fragment_activity_main,new CategoryFragment());
-            fr.commit();
-        //evt. brug room til at gemme arraylisten
+            Intent intent = new Intent();
+            intent.setClass(getActivity(),CategoryActivity.class);
+            getActivity().startActivity(intent);
         });
 
         /*imageButton2.setOnClickListener(this);
