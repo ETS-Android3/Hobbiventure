@@ -46,17 +46,6 @@ Business Administrator = Developer/Maintainer/Service of application.
 | User         | Want to be able to get offers  | It is cheaper for me to use the app instead of going directly to the hobby-location | 5 |<ul><li>[ ] </li></ul>|
 
 
-## Requirements
-- [x] Basics
-- [x] Interaction
-- [x] Navigation
-- [x] UX
-- [x] Lists
-- [x] Architecture
-- [x] Persistence
-- [ ] Networking
-- [x] Firebase
-- [ ] Quality
 
 ## Retrospektiv
 Vi må erkende at vores idé var baseret på en android app der fokuserer for meget på funktionalitet, og ikke så meget android specifikke elementer. Det har resulteret i at vi ikke har fået implementeret så meget af det funktionalitet vi havde sat os for, da vi har prioriteret de android elementer der er implementeret. 
