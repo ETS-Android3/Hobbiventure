@@ -1,4 +1,4 @@
-# Hobbiventure (BETA)
+# HobbiVenture 
 
 ## Program description and motivation
 Idéen til vores app udsprang af en tanke om at danskere skulle have lettere ved at komme i gang med deres fritidsaktiviteter og forhenværende eller nye hobbies efter Corona restriktionerne blev hævet i Danmark. 
@@ -57,7 +57,7 @@ Business Administrator = Developer/Maintainer/Service of application.
 - [ ] Quality
 
 ## Retrospektiv
-Vi må erkende at vores idé var baseret på en android app der fokuserer for meget på funktionalitet, og ikke så meget android specifikke elementer. Det har resulteret i at vi ikke har fået implementeret så meget af det funktionalitet vi havde sat os for. 
+Vi må erkende at vores idé var baseret på en android app der fokuserer for meget på funktionalitet, og ikke så meget android specifikke elementer. Det har resulteret i at vi ikke har fået implementeret så meget af det funktionalitet vi havde sat os for, da vi har prioriteret de android elementer der er implementeret. 
 
 Mulige Networking API med Aarhus events: 
 https://www.opendata.dk/city-of-aarhus/eventdatabasen
