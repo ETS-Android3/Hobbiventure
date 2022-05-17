@@ -2,7 +2,6 @@ package com.example.bottomnavigation.ui.home;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -13,9 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.bottomnavigation.R;
 import com.example.bottomnavigation.databinding.ActivityMapsBinding;
-import com.example.bottomnavigation.databinding.FragmentHistoryBinding;
 import com.example.bottomnavigation.ui.history.HistoryViewModel;
-import com.example.bottomnavigation.ui.search.CategoryFragment;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
