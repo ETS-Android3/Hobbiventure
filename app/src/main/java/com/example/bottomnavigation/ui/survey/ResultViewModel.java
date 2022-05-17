@@ -19,5 +19,4 @@ public class ResultViewModel extends ViewModel {
     public MutableLiveData<ArrayList<Place>> getList(){
         return allPlaces;
     }
-
 }

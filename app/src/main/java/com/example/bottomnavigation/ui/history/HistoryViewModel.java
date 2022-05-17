@@ -1,19 +1,24 @@
 package com.example.bottomnavigation.ui.history;
 
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HistoryViewModel extends ViewModel {
+import com.example.bottomnavigation.ui.survey.Place;
 
-    private final MutableLiveData<String> mText;
+import java.util.ArrayList;
+
+public class HistoryViewModel extends ViewModel {
+    private History histories;
+    private final MutableLiveData<ArrayList<History>> allHistories;
+
 
     public HistoryViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is history fragment");
+        allHistories = new MutableLiveData<>();
+        ArrayList<History> newList = new ArrayList<>();
+        allHistories.setValue(newList);
     }
 
-    public LiveData<String> getText() {
-        return mText;
+public MutableLiveData<ArrayList<History>> getList(){
+            return allHistories;
     }
 }

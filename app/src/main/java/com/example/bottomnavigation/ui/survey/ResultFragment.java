@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
@@ -17,6 +16,7 @@ import com.example.bottomnavigation.R;
 import com.example.bottomnavigation.databinding.FragmentResultBinding;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class ResultFragment extends Fragment {
@@ -39,7 +39,6 @@ public class ResultFragment extends Fragment {
             fr.replace(R.id.nav_host_fragment_activity_main, new SurveyFragment());
             fr.commit();
         });
-
         ArrayList<Place> udendoersSportList = new ArrayList<>();
         udendoersSportList.add(new Place("Asa Fodboldklub - Fodbold"));
         udendoersSportList.add(new Place("Aarhus 1900 - Atletik"));
@@ -48,11 +47,16 @@ public class ResultFragment extends Fragment {
         udendoersSportList.add(new Place("Vestereng - Discgolf"));
         udendoersSportList.add(new Place("Aarhus Ø - Surf"));
         udendoersSportList.add(new Place("Aarhus Watersports Complex - Watersports"));
+        udendoersSportList.add(new Place("Boulders- Climbing"));
+        udendoersSportList.add(new Place("Aarhus RoKlub - WaterSports"));
+        udendoersSportList.add(new Place("Trailfriends - Løb"));
+        udendoersSportList.add(new Place("March with homies - Løb"));
+        udendoersSportList.add(new Place("TESTTEST - WHEY"));
 
-
-
+        Collections.shuffle(udendoersSportList);
         resultAdapter = new ResultAdapter(udendoersSportList);
         recyclerView.setAdapter(resultAdapter);
+
 
         return root;
     }

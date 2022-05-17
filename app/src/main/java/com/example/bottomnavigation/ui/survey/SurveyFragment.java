@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.bottomnavigation.R;
 import com.example.bottomnavigation.databinding.FragmentSurveyBinding;
+import com.example.bottomnavigation.ui.home.MapsFragment;
 
 public class SurveyFragment extends Fragment {
 
@@ -98,6 +99,9 @@ public class SurveyFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        final FragmentTransaction fr = getParentFragmentManager().beginTransaction();
+        fr.detach(SurveyFragment.this);
+        fr.commit();
         binding = null;
     }
 
