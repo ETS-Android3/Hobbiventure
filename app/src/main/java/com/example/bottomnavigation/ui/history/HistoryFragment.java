@@ -24,6 +24,8 @@ public class HistoryFragment extends Fragment {
     private FragmentHistoryBinding binding;
     HistoryAdapter historyAdapter;
 
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         HistoryViewModel historyViewModel =
@@ -31,11 +33,17 @@ public class HistoryFragment extends Fragment {
 
         binding = FragmentHistoryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        final TextView textView = binding.textHistory;
+
         final RecyclerView recyclerView = binding.HistoryRec;
+
+        recyclerView.hasFixedSize();
+
         ArrayList<History> histories = new ArrayList<>();
 
         histories.add(new History("Asa Fodboldklub - Fodbold"));
+        histories.add(new History("Asa f - Fodbold"));
+        histories.add(new History("Asa f - d"));
+
         historyAdapter = new HistoryAdapter(histories);
         recyclerView.setAdapter(historyAdapter);
 
@@ -45,9 +53,6 @@ public class HistoryFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        final FragmentTransaction fr = getParentFragmentManager().beginTransaction();
-        fr.detach(HistoryFragment.this);
-        fr.commit();
         binding = null;
     }
 }

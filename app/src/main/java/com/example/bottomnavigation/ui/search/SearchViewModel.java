@@ -11,7 +11,6 @@ public class SearchViewModel extends ViewModel {
     private final MutableLiveData<String> indoor;
     private final MutableLiveData<String> events;
 
-
     public SearchViewModel() {
 
         outdoor = new MutableLiveData<>();

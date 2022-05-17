@@ -20,11 +20,17 @@ import com.example.bottomnavigation.R;
 import com.example.bottomnavigation.RegisterActivity;
 import com.example.bottomnavigation.databinding.FragmentSearchBinding;
 
+import java.util.ArrayList;
+
 
 public class SearchFragment extends Fragment /*implements View.OnClickListener*/ {
 
     private FragmentSearchBinding binding;
     private CategoryViewModel mCategoryViewModel;
+
+
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         SearchViewModel searchViewModel =
@@ -32,6 +38,7 @@ public class SearchFragment extends Fragment /*implements View.OnClickListener*/
 
         binding = FragmentSearchBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
 
         final ImageButton imageButton1 = binding.udendoerssport;
         final ImageButton imageButton2 = binding.vildmark;
@@ -49,6 +56,16 @@ public class SearchFragment extends Fragment /*implements View.OnClickListener*/
             Intent intent = new Intent();
             intent.setClass(getActivity(),CategoryActivity.class);
             getActivity().startActivity(intent);
+
+
+
+
+        });
+        imageButton2.setOnClickListener(view -> {
+            Intent intent = new Intent();
+            intent.setClass(getActivity(),CategoryActivity.class);
+            getActivity().startActivity(intent);
+
         });
 
         /*imageButton2.setOnClickListener(this);
@@ -57,11 +74,13 @@ public class SearchFragment extends Fragment /*implements View.OnClickListener*/
         return root;
     }
 
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
     }
+
   /* @Override
     public void onClick(final View view) {
 switch (view.getId()){

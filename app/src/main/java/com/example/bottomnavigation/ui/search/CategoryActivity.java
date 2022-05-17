@@ -22,13 +22,15 @@ public class CategoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
+
         mRecyclerView = findViewById(R.id.rv);
+
         mCategoryViewModel = new ViewModelProvider(this).get(CategoryViewModel.class);
 
-        mCategoryViewModel.initVM();
-        mCategoryViewModel.initUS();
-        mCategoryViewModel.initIS();
-        mCategoryViewModel.initHK();
+        //mCategoryViewModel.initUS();
+       mCategoryViewModel.initVM();
+       // mCategoryViewModel.initIS();
+       // mCategoryViewModel.initHK();
 
         mCategoryViewModel.getPlaces().observe(this, new Observer<List<Place>>() {
             @Override
