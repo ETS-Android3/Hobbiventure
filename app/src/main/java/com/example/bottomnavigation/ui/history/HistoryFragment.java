@@ -31,10 +31,10 @@ public class HistoryFragment extends Fragment {
 
         binding = FragmentHistoryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
         final TextView textView = binding.textHistory;
         final RecyclerView recyclerView = binding.HistoryRec;
         ArrayList<History> histories = new ArrayList<>();
+
         histories.add(new History("Asa Fodboldklub - Fodbold"));
         historyAdapter = new HistoryAdapter(histories);
         recyclerView.setAdapter(historyAdapter);

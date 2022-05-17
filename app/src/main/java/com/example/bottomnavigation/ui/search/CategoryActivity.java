@@ -21,13 +21,16 @@ public class CategoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_category);
+        setContentView(R.layout.activity_category);
 
         mRecyclerView = findViewById(R.id.rv);
 
         mCategoryViewModel = new ViewModelProvider(this).get(CategoryViewModel.class);
 
-        mCategoryViewModel.init();
+        //mCategoryViewModel.initUS();
+       mCategoryViewModel.initVM();
+       // mCategoryViewModel.initIS();
+       // mCategoryViewModel.initHK();
 
         mCategoryViewModel.getPlaces().observe(this, new Observer<List<Place>>() {
             @Override
@@ -45,5 +48,9 @@ public class CategoryActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(linearLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
     }
-    //on destroy
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        //virker ikke
+    }
 }

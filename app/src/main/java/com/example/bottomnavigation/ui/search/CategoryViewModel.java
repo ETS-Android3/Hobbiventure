@@ -8,19 +8,44 @@ import androidx.lifecycle.ViewModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CategoryViewModel extends ViewModel{
+public class CategoryViewModel extends ViewModel {
     private MutableLiveData<List<Place>> mPlaces;
     private PlaceRepository mRepo;
     private Place place;
 
-    public void init(){
-        if(mPlaces != null){
+    public void initUS() {
+        if (mPlaces != null) {
             return;
         }
         mRepo = PlaceRepository.getInstance();
-        mPlaces = mRepo.getPlaceEmpty();
+        mPlaces = mRepo.getUdendoersSport();
     }
-    public LiveData<List<Place>> getPlaces(){
+
+    public void initVM() {
+        if (mPlaces != null) {
+            return;
+        }
+        mRepo = PlaceRepository.getInstance();
+        mPlaces = mRepo.getVildmark();
+    }
+
+    public void initIS() {
+        if (mPlaces != null) {
+            return;
+        }
+        mRepo = PlaceRepository.getInstance();
+        mPlaces = mRepo.getIndendoersSport();
+    }
+
+    public void initHK() {
+        if (mPlaces != null) {
+            return;
+        }
+        mRepo = PlaceRepository.getInstance();
+        mPlaces = mRepo.getHjemkundsskab();
+    }
+
+    public LiveData<List<Place>> getPlaces() {
         return mPlaces;
     }
 }
