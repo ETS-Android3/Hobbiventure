@@ -12,8 +12,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.bottomnavigation.R;
 import com.example.bottomnavigation.databinding.FragmentSearchBinding;
 import com.example.bottomnavigation.ui.home.MapsFragment;
 import com.example.bottomnavigation.ui.profile.SettingsFragment;
