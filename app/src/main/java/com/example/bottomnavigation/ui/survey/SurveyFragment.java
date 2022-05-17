@@ -1,6 +1,5 @@
 package com.example.bottomnavigation.ui.survey;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +16,6 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.bottomnavigation.R;
 import com.example.bottomnavigation.databinding.FragmentSurveyBinding;
-import com.example.bottomnavigation.ui.home.MapsFragment;
 
 public class SurveyFragment extends Fragment {
 
@@ -38,7 +36,8 @@ public class SurveyFragment extends Fragment {
         final Button button2 = binding.confirmButton2;
         final Button button3 = binding.confirmButton3;
         final Button button4 = binding.confirmButton4;
-        final Button button5 = binding.SaveButton;
+        final Button button5 = binding.confirmButton5;
+        final Button saveButton = binding.SaveButton;
         final Button button6 = binding.resultBtn;
 
         final FragmentTransaction fr = getParentFragmentManager().beginTransaction();
@@ -60,7 +59,7 @@ public class SurveyFragment extends Fragment {
             checkbox1.setChecked(false);
             checkbox2.setChecked(false);
             checkbox3.setChecked(false);
-            textView.setText("Do you prefer to run or walk?");
+            textView.setText("Do you prefer to run");
         });
 
         button3.setOnClickListener(view -> {
@@ -77,7 +76,15 @@ public class SurveyFragment extends Fragment {
             textView.setText("Do you expect to practice an activity for 5+ hours a week?");
         });
 
+
         button5.setOnClickListener(view -> {
+            checkbox1.setChecked(false);
+            checkbox2.setChecked(false);
+            checkbox3.setChecked(false);
+            textView.setText("Do you like to be social when you are active?");
+        });
+
+        saveButton.setOnClickListener(view -> {
             String result = "Selected answer";
             if(checkbox1.isChecked()){
                 result += "\nYes";

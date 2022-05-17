@@ -30,19 +30,19 @@
         app:layout_constraintHorizontal_bias="0.016"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox"
-        app:layout_constraintVertical_bias="0.135" />
+        app:layout_constraintVertical_bias="0.659" />
 
     <Button
         android:id="@+id/confirm_button2"
         android:layout_width="132dp"
         android:layout_height="48dp"
         android:text="@string/Question2"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_button5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.938"
-        app:layout_constraintStart_toEndOf="@+id/SaveButton"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3"
-        app:layout_constraintVertical_bias="0.157">
+        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintStart_toEndOf="@+id/confirm_button"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2"
+        app:layout_constraintVertical_bias="0.391">
 
     </Button>
 
@@ -53,10 +53,10 @@
         android:text="@string/Question3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirm_button"
-        app:layout_constraintVertical_bias="0.105">
+        app:layout_constraintVertical_bias="0.073">
 
     </Button>
 
@@ -78,10 +78,10 @@
         android:text="@string/Question4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.992"
+        app:layout_constraintHorizontal_bias="0.807"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirm_button2"
-        app:layout_constraintVertical_bias="0.143">
+        app:layout_constraintVertical_bias="0.092">
 
     </Button>
 
@@ -90,12 +90,11 @@
         android:layout_width="148dp"
         android:layout_height="48dp"
         android:text="question 5"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/result_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_button5"
-        app:layout_constraintVertical_bias="0.215">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/SaveButton"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_button3">
 
     </Button>
 
@@ -125,12 +124,13 @@
         android:id="@+id/confirm_button"
         android:layout_width="135dp"
         android:layout_height="50dp"
-        android:layout_marginTop="36dp"
         android:text="@string/Question1"
+        app:layout_constraintBottom_toTopOf="@+id/SaveButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
-        app:layout_constraintStart_toEndOf="@+id/SaveButton"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2">
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox"
+        app:layout_constraintVertical_bias="0.15">
 
     </Button>
 
@@ -142,10 +142,10 @@
         android:text="Results"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintHorizontal_bias="0.765"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirm_button4"
-        app:layout_constraintVertical_bias="0.156" />
+        app:layout_constraintVertical_bias="0.804" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,8 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bottomnavigation.databinding.FragmentHistoryBinding;
-import com.example.bottomnavigation.ui.survey.Place;
-import com.example.bottomnavigation.ui.survey.ResultFragment;
+
 
 import java.util.ArrayList;
 
@@ -39,10 +38,12 @@ public class HistoryFragment extends Fragment {
         recyclerView.hasFixedSize();
 
         ArrayList<History> histories = new ArrayList<>();
+        histories.add(new History("Last performed survey: 4.05 PM 5/17/2022"));
+        histories.add(new History(""));
+        histories.add(new History(""));
 
-        histories.add(new History("Asa Fodboldklub - Fodbold"));
-        histories.add(new History("Asa f - Fodbold"));
-        histories.add(new History("Asa f - d"));
+        histories.add(new History("Contact Charlie - for customer support - TEL: 88899224"));
+
 
         historyAdapter = new HistoryAdapter(histories);
         recyclerView.setAdapter(historyAdapter);

@@ -75,7 +75,7 @@ public class SearchFragment extends Fragment /*implements View.OnClickListener*/
 
         });
 
-        /*imageButton2.setOnClickListener(this);
+        /*
         imageButton3.setOnClickListener(this);
         imageButton4.setOnClickListener(this);*/
         return root;
