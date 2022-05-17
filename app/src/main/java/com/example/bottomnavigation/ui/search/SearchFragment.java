@@ -45,6 +45,7 @@ public class SearchFragment extends Fragment /*implements View.OnClickListener*/
         searchViewModel.getTextEvents().observe(getViewLifecycleOwner(), events::setText);
 
         imageButton1.setOnClickListener(view -> {
+            int id = view.getId();
             Intent intent = new Intent();
             intent.setClass(getActivity(),CategoryActivity.class);
             getActivity().startActivity(intent);
