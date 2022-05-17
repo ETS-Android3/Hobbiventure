@@ -22,7 +22,7 @@
     </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvActivities"
+        android:id="@+id/HistoryRec"
         android:layout_width="350dp"
         android:layout_height="371dp"
         android:layout_margin="20dp"
